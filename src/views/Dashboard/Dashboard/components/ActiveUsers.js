@@ -13,7 +13,7 @@ import {
 import React from "react";
 import ChartStatistics from "./ChartStatistics";
 
-const ActiveUsers = ({ title, percentage, chart }) => {
+const ActiveUsers = ({ title, chart }) => {
   const iconBoxInside = useColorModeValue("white", "white");
   const textColor = useColorModeValue("gray.700", "white");
   return (

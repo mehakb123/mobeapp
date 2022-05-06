@@ -1,12 +1,12 @@
 /*eslint-disable*/
 // chakra imports
 import {
-    Box,
-    Button, Flex,
-    Link,
-    Stack,
-    Text,
-    useColorModeValue
+  Box,
+  Button, Flex,
+  Link,
+  Stack,
+  Text,
+  useColorModeValue
 } from "@chakra-ui/react";
 import IconBox from "components/Icons/IconBox";
 import { CreativeTimLogo } from "components/Icons/Icons";
@@ -20,7 +20,7 @@ import { NavLink, useLocation } from "react-router-dom";
 
 const SidebarContent = ({ logoText, routes }) => {
 
-    // to check for active links and opened collapses
+  // to check for active links and opened collapses
   let location = useLocation();
   // this is for the rest of the collapses
   const [state, setState] = React.useState({});
@@ -36,7 +36,7 @@ const SidebarContent = ({ logoText, routes }) => {
     const activeColor = useColorModeValue("gray.700", "white");
     const inactiveColor = useColorModeValue("gray.400", "gray.400");
 
-    return routes.map((prop, key) => {
+    return routes.filter(route => !route.hidden).map((prop, key) => {
       if (prop.redirect) {
         return null;
       }
@@ -67,7 +67,7 @@ const SidebarContent = ({ logoText, routes }) => {
         );
       }
       return (
-        <NavLink to={prop.layout + prop.path} key={prop.name}>
+        <NavLink to={prop.layout + prop.path} key={prop.name} >
           {activeRoute(prop.layout + prop.path) === "active" ? (
             <Button
               boxSize="initial"
@@ -96,6 +96,7 @@ const SidebarContent = ({ logoText, routes }) => {
               _focus={{
                 boxShadow: "none",
               }}
+
             >
               <Flex>
                 {typeof prop.icon === "string" ? (
@@ -146,7 +147,9 @@ const SidebarContent = ({ logoText, routes }) => {
               _focus={{
                 boxShadow: "none",
               }}
+
             >
+
               <Flex>
                 {typeof prop.icon === "string" ? (
                   <Icon>{prop.icon}</Icon>
@@ -174,33 +177,33 @@ const SidebarContent = ({ logoText, routes }) => {
     });
   };
 
-    const links = <>{createLinks(routes)}</>;
+  const links = <>{createLinks(routes)}</>;
 
   return (
     <>
-        <Box pt={"25px"} mb="12px">
-      <Link
-        href={`${process.env.PUBLIC_URL}/#/`}
-        target="_blank"
-        display="flex"
-        lineHeight="100%"
-        mb="30px"
-        fontWeight="bold"
-        justifyContent="center"
-        alignItems="center"
-        fontSize="11px"
-      >
-        <CreativeTimLogo w="32px" h="32px" me="10px" />
-        <Text fontSize="sm" mt="3px">
-          {logoText}
-        </Text>
-      </Link>
-      <Separator></Separator>
-    </Box>
-          <Stack direction="column" mb="40px">
-            <Box>{links}</Box>
-          </Stack>
-          <SidebarHelp />
+      <Box pt={"25px"} mb="12px">
+        <Link
+          href={`${process.env.PUBLIC_URL}/#/`}
+          target="_blank"
+          display="flex"
+          lineHeight="100%"
+          mb="30px"
+          fontWeight="bold"
+          justifyContent="center"
+          alignItems="center"
+          fontSize="11px"
+        >
+          <CreativeTimLogo w="32px" h="32px" me="10px" />
+          <Text fontSize="sm" mt="3px">
+            {logoText}
+          </Text>
+        </Link>
+        <Separator></Separator>
+      </Box>
+      <Stack direction="column" mb="40px">
+        <Box>{links}</Box>
+      </Stack>
+      <SidebarHelp />
     </>
   )
 }

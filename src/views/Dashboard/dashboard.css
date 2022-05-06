@@ -1,0 +1,68 @@
+.pageClassName, .previousClassName, .nextClassName, .previousClassNameLight, .nextClassNameLight {
+    list-style-type: none !important;
+}
+
+.containerClassName {
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin-right: -559px !important;
+    margin-top: 261px !important;
+    /* background-color: yellow !important; */
+}
+
+.pageLinkClassName {
+    margin: 5px !important;
+    /* border: 2px solid #141A25 !important; */
+    border: 1px solid white !important;
+    padding: 5px 8px !important;
+    font-size: 12px !important;
+    border-radius: 3px !important;
+}
+
+.pageLinkClassNameLight {
+    margin: 5px !important;
+    /* border: 2px solid #141A25 !important; */
+    border: 1px solid #4bc5c5 !important;
+    padding: 5px 8px !important;
+    font-size: 12px !important;
+    border-radius: 3px !important;
+}
+
+.pageLinkClassName:focus {
+    margin: 5px !important;
+    border: 1px solid white !important;
+    /* color: white !important; */
+    padding: 5px 8px !important;
+    font-size: 12px !important;
+}
+
+.break::marker {
+    content: "" !important;
+}
+
+.pageBreakClassName {
+    display: none !important
+}
+
+.breakLinkClassName {
+    list-style-type: none !important;
+}
+
+.pageActiveClassName {
+    /* color: white !important; */
+    font-weight: bold !important;
+}
+
+/* .pageActiveClassName:active{
+    color: white !important;
+    font-weight: bold !important;
+  } */
+.activeLinkClassName {
+    color: black !important;
+    background-color: white !important;
+}
+
+.activeLinkClassNameLight {
+    color: white !important;
+    background-color: #4FC7C7 !important;
+}

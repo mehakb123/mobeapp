@@ -11,7 +11,7 @@ export function SidebarHelp(props) {
     <Flex
       borderRadius="15px"
       flexDirection="column"
-      bgImage={SidebarHelpImage}
+      // bgImage={SidebarHelpImage}
       justifyContent="flex-start"
       alignItems="start"
       boxSize="border-box"
@@ -19,20 +19,20 @@ export function SidebarHelp(props) {
       h="170px"
       w="100%"
     >
-      <IconBox width="35px" h="35px" bg="white" mb="auto">
+      {/* <IconBox width="35px" h="35px" bg="white" mb="auto">
         <QuestionIcon color="teal.300" h="18px" w="18px" />
-      </IconBox>
-      <Text fontSize="sm" color="white" fontWeight="bold">
+      </IconBox> */}
+      {/* <Text fontSize="sm" color="white" fontWeight="bold">
         Need help?
-      </Text>
-      <Text fontSize="xs" color="white" mb="10px">
+      </Text> */}
+      {/* <Text fontSize="xs" color="white" mb="10px">
         Please check our docs
-      </Text>
+      </Text> */}
       <Link
-        w="100%"
-        href="https://demos.creative-tim.com/docs-purity-ui-dashboard/"
+      // w="100%"
+      // href="https://demos.creative-tim.com/docs-purity-ui-dashboard/"
       >
-        <Button
+        {/* <Button
           fontSize="10px"
           fontWeight="bold"
           w="100%"
@@ -49,7 +49,7 @@ export function SidebarHelp(props) {
           color="black"
         >
           DOCUMENTATION
-        </Button>
+        </Button> */}
       </Link>
     </Flex>
   );

@@ -15,7 +15,7 @@ export default function Pages(props) {
   React.useEffect(() => {
     document.body.style.overflow = "unset";
     // Specify how to clean up after this effect:
-    return function cleanup() {};
+    return function cleanup() { };
   });
   const getActiveRoute = (routes) => {
     let activeRoute = "Default Brand Text";
@@ -87,10 +87,12 @@ export default function Pages(props) {
     <ChakraProvider theme={theme} resetCss={false} w="100%">
       <Box ref={navRef} w="100%">
         <Portal containerRef={navRef}>
-          <AuthNavbar
+
+          {/* <AuthNavbar
             secondary={getActiveNavbar(routes)}
-            logoText="PURITY UI DASHBOARD"
-          />
+          logoText="PURITY UI DASHBOARD"
+          /> */}
+
         </Portal>
         <Box w="100%">
           <Box ref={wrapper} w="100%">

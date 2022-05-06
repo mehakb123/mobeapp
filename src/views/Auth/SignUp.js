@@ -16,6 +16,7 @@ import {
 // Assets
 import BgSignUp from "assets/img/BgSignUp.png";
 import React from "react";
+// import { useHistory } from "react-router";
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa";
 
 function SignUp() {
@@ -23,6 +24,8 @@ function SignUp() {
   const textColor = useColorModeValue("gray.700", "white");
   const bgColor = useColorModeValue("white", "gray.700");
   const bgIcons = useColorModeValue("teal.200", "rgba(255, 255, 255, 0.5)");
+  // const history = useHistory();
+
   return (
     <Flex
       direction='column'

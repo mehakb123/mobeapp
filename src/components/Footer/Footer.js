@@ -7,54 +7,54 @@ export default function Footer(props) {
   // const linkTeal = useColorModeValue("teal.400", "red.200");=
   return (
     <Flex
-      flexDirection={{
-        base: "column",
-        xl: "row",
-      }}
-      alignItems={{
-        base: "center",
-        xl: "start",
-      }}
-      justifyContent="space-between"
-      px="30px"
-      pb="20px"
+    // flexDirection={{
+    //   base: "column",
+    //   xl: "row",
+    // }}
+    // alignItems={{
+    //   base: "center",
+    //   xl: "start",
+    // }}
+    // justifyContent="space-between"
+    // px="30px"
+    // pb="20px"
     >
       <Text
-        color="gray.400"
-        textAlign={{
-          base: "center",
-          xl: "start",
-        }}
-        mb={{ base: "20px", xl: "0px" }}
+      // color="gray.400"
+      // textAlign={{
+      //   base: "center",
+      //   xl: "start",
+      // }}
+      // mb={{ base: "20px", xl: "0px" }}
       >
-        &copy; {1900 + new Date().getYear()},{" "}
-        <Text as="span">
+        {/* &copy; {1900 + new Date().getYear()},{" "} */}
+        {/* <Text as="span">
           {document.documentElement.dir === "rtl"
             ? " مصنوع من ❤️ بواسطة"
             : "Made with ❤️ by "}
-        </Text>
+        </Text> */}
         <Link
           // color={linkTeal}
           color="teal.400"
           href="https://www.creative-tim.com"
           target="_blank"
         >
-          {document.documentElement.dir === "rtl"
+          {/* {document.documentElement.dir === "rtl"
             ? " توقيت الإبداعية"
-            : "Creative Tim "}
+            : "Creative Tim "} */}
         </Link>
-        &
+        {/* & */}
         <Link
           // color={linkTeal}
           color="teal.400"
           href="https://www.simmmple.com"
           target="_blank"
         >
-          {document.documentElement.dir === "rtl" ? "سيممبل " : " Simmmple"}
+          {/* {document.documentElement.dir === "rtl" ? "سيممبل " : " Simmmple"} */}
         </Link>
-        {document.documentElement.dir === "rtl"
+        {/* {document.documentElement.dir === "rtl"
           ? "للحصول على ويب أفضل"
-          : " for a better web"}
+          : " for a better web"} */}
       </Text>
       <List display="flex">
         <ListItem
@@ -63,11 +63,11 @@ export default function Footer(props) {
             md: "44px",
           }}
         >
-          <Link color="gray.400" href="https://www.creative-tim.com">
+          {/* <Link color="gray.400" href="https://www.creative-tim.com">
             {document.documentElement.dir === "rtl"
               ? "توقيت الإبداعية"
               : "Creative Tim"}
-          </Link>
+          </Link> */}
         </ListItem>
         <ListItem
           me={{
@@ -75,9 +75,9 @@ export default function Footer(props) {
             md: "44px",
           }}
         >
-          <Link color="gray.400" href="https://www.simmmple.com">
+          {/* <Link color="gray.400" href="https://www.simmmple.com">
             {document.documentElement.dir === "rtl" ? "سيممبل" : "Simmmple"}
-          </Link>
+          </Link> */}
         </ListItem>
         <ListItem
           me={{
@@ -90,7 +90,7 @@ export default function Footer(props) {
             href="#blog"
             href="https://creative-tim.com/blog"
           >
-            {document.documentElement.dir === "rtl" ? "مدونة" : "Blog"}
+            {/* {document.documentElement.dir === "rtl" ? "مدونة" : "Blog"} */}
           </Link>
         </ListItem>
         <ListItem>
@@ -99,7 +99,7 @@ export default function Footer(props) {
             href="#license"
             href="https://www.creative-tim.com/license"
           >
-            {document.documentElement.dir === "rtl" ? "رخصة" : "License"}
+            {/* {document.documentElement.dir === "rtl" ? "رخصة" : "License"} */}
           </Link>
         </ListItem>
       </List>

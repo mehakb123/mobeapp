@@ -5,7 +5,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import SidebarContent from "./SidebarContent";
-
+import { Image } from '@chakra-ui/react';
 // FUNCTIONS
 
 function Sidebar(props) {
@@ -31,8 +31,9 @@ function Sidebar(props) {
     <Box ref={mainPanel}>
       <Box display={{ sm: "none", xl: "block" }} position="fixed">
         <Box
-          bg={sidebarBg}
+          bg={'#253645'}
           transition={variantChange}
+          color={'white'}
           w="260px"
           maxW="260px"
           ms={{
@@ -47,18 +48,29 @@ function Sidebar(props) {
           m={sidebarMargins}
           borderRadius={sidebarRadius}
         >
-          <SidebarContent routes={routes}
-        logoText={"PURITY UI DASHBOARD"}
-        display="none"
-        sidebarVariant={sidebarVariant}
-        />
+          <Box mr="20%">
+            <Image
+              boxSize='100px'
+              width="53px"
+              height="71px"
+              mb="-70px"
+              ml="23px"
+              padding="8px"
+              // objectFit='cover'
+              src='http://mobe.keymouseit.com/mobebarstock/img/ic_mobe.png'
+              alt='Dan Abramov'
+            />
+            {/* <SidebarContent routes={routes} */}
+            <SidebarContent routes={routes}
+              logoText={"Admin"}
+              display="none"
+              sidebarVariant={sidebarVariant}
+            />
+
+          </Box>
         </Box>
       </Box>
-    </Box>
+    </Box >
   );
 }
-
-
-
-
 export default Sidebar;

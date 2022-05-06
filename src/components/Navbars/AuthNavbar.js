@@ -96,9 +96,9 @@ export default function AuthNavbar(props) {
           me={{ sm: "2px", md: "16px" }}
           color={navbarIcon}
           variant="transparent-with-icon"
-          leftIcon={<HomeIcon color={navbarIcon} w="12px" h="12px" me="0px" />}
+        // leftIcon={<HomeIcon color={navbarIcon} w="12px" h="12px" me="0px" />}
         >
-          <Text>Dashboard</Text>
+          {/* <Text>Dashboard</Text> */}
         </Button>
       </NavLink>
       <NavLink to="/admin/profile">
@@ -110,11 +110,11 @@ export default function AuthNavbar(props) {
           me={{ sm: "2px", md: "16px" }}
           color={navbarIcon}
           variant="transparent-with-icon"
-          leftIcon={
-            <PersonIcon color={navbarIcon} w="12px" h="12px" me="0px" />
-          }
+        // leftIcon={
+        //   <PersonIcon color={navbarIcon} w="12px" h="12px" me="0px" />
+        // }
         >
-          <Text>Profile</Text>
+          {/* <Text>Profile</Text> */}
         </Button>
       </NavLink>
       <NavLink to="/auth/signup">
@@ -126,28 +126,28 @@ export default function AuthNavbar(props) {
           me={{ sm: "2px", md: "16px" }}
           color={navbarIcon}
           variant="transparent-with-icon"
-          leftIcon={
-            <RocketIcon color={navbarIcon} w="12px" h="12px" me="0px" />
-          }
+        // leftIcon={
+        //   <RocketIcon color={navbarIcon} w="12px" h="12px" me="0px" />
+        // }
         >
-          <Text>Sign Up</Text>
+          {/* <Text>Sign Up</Text> */}
         </Button>
       </NavLink>
-      <NavLink to="/auth/signin">
-        <Button
-          fontSize="sm"
-          ms="0px"
-          px="0px"
-          me={{ sm: "2px", md: "16px" }}
-          color={navbarIcon}
-          variant="transparent-with-icon"
-          leftIcon={
-            <DocumentIcon color={navbarIcon} w="12px" h="12px" me="0px" />
-          }
-        >
-          <Text>Sign In</Text>
-        </Button>
-      </NavLink>
+      {/* <NavLink to="/auth/signin"> */}
+      <Button
+        fontSize="sm"
+        ms="0px"
+        px="0px"
+        me={{ sm: "2px", md: "16px" }}
+        color={navbarIcon}
+        variant="transparent-with-icon"
+      // leftIcon={
+      //   <DocumentIcon color={navbarIcon} w="12px" h="12px" me="0px" />
+      // }
+      >
+        {/* <Text>Sign In</Text> */}
+      </Button>
+      {/* </NavLink> */}
     </HStack>
   );
   return (
@@ -184,8 +184,8 @@ export default function AuthNavbar(props) {
           />
         </Box>
         {linksAuth}
-        <Link href="https://creative-tim.com/product/purity-ui-dashboard">
-          <Button
+        <Link href="https://creative-tim.com/product">
+          {/* <Button
             bg={bgButton}
             color={colorButton}
             fontSize="xs"
@@ -198,7 +198,7 @@ export default function AuthNavbar(props) {
             }}
           >
             Free Download
-          </Button>
+          </Button> */}
         </Link>
       </Flex>
     </Flex>

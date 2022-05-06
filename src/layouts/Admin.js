@@ -24,6 +24,9 @@ export default function Dashboard(props) {
   const getRoute = () => {
     return window.location.pathname !== "/admin/full-screen-maps";
   };
+  const getRoute1 = () => {
+    return window.location.pathname !== "/admin/full-screen-maps";
+  };
   const getActiveRoute = (routes) => {
     let activeRoute = "Default Brand Text";
     for (let i = 0; i < routes.length; i++) {
@@ -82,6 +85,29 @@ export default function Dashboard(props) {
             path={prop.layout + prop.path}
             component={prop.component}
             key={key}
+
+          />
+        );
+      } else {
+        return null;
+      }
+    });
+  };
+
+  const getRoutes1 = (routes) => {
+    return routes.map((prop, key) => {
+      if (prop.collapse) {
+        return getRoutes1(prop.views);
+      }
+      if (prop.category === "account") {
+        return getRoutes1(prop.views);
+      }
+      if (prop.layout === "/admin") {
+        return (
+          <Route
+            path={prop.layout + prop.path}
+            component={prop.component}
+            key={key}
           />
         );
       } else {
@@ -110,7 +136,7 @@ export default function Dashboard(props) {
         <Portal>
           <AdminNavbar
             onOpen={onOpen}
-            logoText={"PURITY UI DASHBOARD"}
+            // logoText={"PURITY UI DASHBOARD"}
             brandText={getActiveRoute(routes)}
             secondary={getActiveNavbar(routes)}
             fixed={fixed}
@@ -122,11 +148,24 @@ export default function Dashboard(props) {
             <PanelContainer>
               <Switch>
                 {getRoutes(routes)}
-                <Redirect from="/admin" to="/admin/dashboard" />
+                {/* <Redirect from="/admin" to="/admin/addcategories" /> */}
+                <Redirect from="/admin" to="/admin/home" />
               </Switch>
             </PanelContainer>
           </PanelContent>
         ) : null}
+
+        {/* {getRoute1() ? (
+          <PanelContent>
+            <PanelContainer>
+              <Switch>
+                {getRoutes1(routes)}
+                <Redirect from="/admin" to="/admin/addcategories" />
+              </Switch>
+            </PanelContainer>
+          </PanelContent>
+        ) : null} */}
+
         <Footer />
         <Portal>
           <FixedPlugin

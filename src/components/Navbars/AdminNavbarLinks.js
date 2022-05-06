@@ -1,7 +1,9 @@
 // Chakra Icons
 import { BellIcon, SearchIcon } from "@chakra-ui/icons";
+
 // Chakra Imports
 import {
+  Box,
   Button,
   Flex,
   IconButton,
@@ -39,11 +41,11 @@ export default function HeaderLinks(props) {
   let navbarIcon = useColorModeValue("gray.500", "gray.200");
   let searchIcon = useColorModeValue("gray.700", "gray.200");
 
-  if (secondary) {
-    navbarIcon = "white";
-    mainText = "white";
-  }
-  const settingsRef = React.useRef();
+  // if (secondary) {
+  //   navbarIcon = "white";
+  //   mainText = "white";
+  // // }
+  // const settingsRef = React.useRef();
   return (
     <Flex
       pe={{ sm: "0px", md: "16px" }}
@@ -67,7 +69,7 @@ export default function HeaderLinks(props) {
           borderColor: { mainTeal },
         }}
       >
-        <InputLeftElement
+        {/* <InputLeftElement
           children={
             <IconButton
               bg="inherit"
@@ -81,43 +83,47 @@ export default function HeaderLinks(props) {
               _focus={{
                 boxShadow: "none",
               }}
-              icon={<SearchIcon color={searchIcon} w="15px" h="15px" />}
+            // icon={<SearchIcon color={searchIcon} w="15px" h="15px" />}
             ></IconButton>
           }
-        />
-        <Input
+        /> */}
+        {/* <Input
           fontSize="xs"
           py="11px"
           color={mainText}
           placeholder="Type here..."
           borderRadius="inherit"
-        />
+        /> */}
       </InputGroup>
-      <NavLink to="/auth/signin">
-        <Button
-          ms="0px"
-          px="0px"
-          me={{ sm: "2px", md: "16px" }}
-          color={navbarIcon}
-          variant="transparent-with-icon"
-          rightIcon={
-            document.documentElement.dir ? (
-              ""
-            ) : (
-              <ProfileIcon color={navbarIcon} w="22px" h="22px" me="0px" />
-            )
-          }
-          leftIcon={
-            document.documentElement.dir ? (
-              <ProfileIcon color={navbarIcon} w="22px" h="22px" me="0px" />
-            ) : (
-              ""
-            )
-          }
-        >
-          <Text display={{ sm: "none", md: "flex" }}>Sign In</Text>
-        </Button>
-      </NavLink>
+      {/* <NavLink to="/auth/signin"> */}
+      {/* <Button
+        ms="0px"
+        px="0px"
+        me={{ sm: "2px", md: "16px" }}
+        color={navbarIcon}
+        variant="transparent-with-icon" */}
+      {/* // rightIcon={ */}
+      {/* //   document.documentElement.dir ? ( */}
+      {/* //     "" */}
+      {/* //   ) : ( */}
+      {/* //     <ProfileIcon color={navbarIcon} w="22px" h="22px" me="0px" /> */}
+      {/* //   ) */}
+      {/* // } */}
+      {/* // leftIcon={ */}
+      {/* //   document.documentElement.dir ? ( */}
+      {/* //     <ProfileIcon color={navbarIcon} w="22px" h="22px" me="0px" /> */}
+      {/* //   ) : ( */}
+      {/* //     "" */}
+      {/* //   ) */}
+      {/* // } */}
+      {/* // > */}
+      {/* <Box mb='1800%'>
+          <NavLink to="/auth/signin"> */}
+      {/* //  < Text display={{ sm: "none", md: "flex" }}>Logout</Text> */}
+      {/* </NavLink> */}
+      {/* </Box>
+    </Button> */}
+      {/* </NavLink> */}
       <SidebarResponsive
         logoText={props.logoText}
         secondary={props.secondary}
@@ -125,7 +131,7 @@ export default function HeaderLinks(props) {
         // logo={logo}
         {...rest}
       />
-      <SettingsIcon
+      {/* <SettingsIcon
         cursor="pointer"
         ms={{ base: "16px", xl: "0px" }}
         me="16px"
@@ -134,12 +140,12 @@ export default function HeaderLinks(props) {
         color={navbarIcon}
         w="18px"
         h="18px"
-      />
+      /> */}
       <Menu>
-        <MenuButton>
+        {/* <MenuButton>
           <BellIcon color={navbarIcon} w="18px" h="18px" />
-        </MenuButton>
-        <MenuList p="16px 8px">
+        </MenuButton> */}
+        {/* <MenuList p="16px 8px">
           <Flex flexDirection="column">
             <MenuItem borderRadius="8px" mb="10px">
               <ItemContent
@@ -169,9 +175,9 @@ export default function HeaderLinks(props) {
               />
             </MenuItem>
           </Flex>
-        </MenuList>
+        </MenuList> */}
       </Menu>
-    </Flex>
+    </Flex >
   );
 }
 
